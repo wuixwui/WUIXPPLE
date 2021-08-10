@@ -31,7 +31,6 @@ body {
     font-size: 23px;
     ul {
       @extend %flexCenter;
-      height: 100%;
       & > li.logo-image {
         @extend %flexCenter;
         &:first-child {
@@ -58,7 +57,7 @@ body {
       }
       & > li {
         line-height: 30px;
-        padding: 0 13px;
+        padding: 3px 13px 0 13px;
         &:hover {
           background: #000;
           color: #fff;

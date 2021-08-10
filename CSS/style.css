@@ -44,10 +44,6 @@ body {
   font-size: 23px;
 }
 
-.container > header ul {
-  height: 100%;
-}
-
 .container > header ul > li.logo-image:first-child {
   height: 30px;
   width: 40px;
@@ -75,7 +71,7 @@ body {
 
 .container > header ul > li {
   line-height: 30px;
-  padding: 0 13px;
+  padding: 3px 13px 0 13px;
 }
 
 .container > header ul > li:hover {
