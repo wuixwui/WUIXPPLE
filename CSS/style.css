@@ -155,7 +155,7 @@ header > ul > li:not(.logo-image):hover .drop-menu {
   display: block;
 }
 
-header > .user-name {
+#user-name {
   height: 30px;
   line-height: 30px;
   padding: 2px 13px 0 13px;
