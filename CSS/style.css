@@ -76,8 +76,8 @@ header {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
-  height: 30px;
-  padding: 0 15px;
+  height: 40px;
+  padding: 0 30px;
   border-bottom: 2.4px solid #000;
   background: #fff;
   font-size: 23px;
@@ -97,7 +97,7 @@ header > ul li.logo-image {
 }
 
 header > ul li.logo-image .logo-png {
-  height: 30px;
+  height: 40px;
   width: 40px;
   background-image: url("../images/black_apple_logo.png");
   background-size: 23px;
@@ -153,9 +153,9 @@ header > ul li.logo-image:hover .by-wuix {
 
 header > ul > li:not(.logo-image) {
   position: relative;
-  height: 30px;
+  height: 40px;
   padding: 2px 13px 0 13px;
-  line-height: 30px;
+  line-height: 40px;
 }
 
 header > ul > li:not(.logo-image):hover {
@@ -168,8 +168,8 @@ header > ul > li:not(.logo-image):hover .drop-menu {
 }
 
 #user-name {
-  height: 30px;
-  line-height: 30px;
+  height: 40px;
+  line-height: 40px;
   padding: 2px 13px 0 13px;
 }
 

@@ -2,8 +2,8 @@
 header {
   @extend %flexCenter;
   justify-content: space-between;
-  height: 30px;
-  padding: 0 15px;
+  height: 40px;
+  padding: 0 30px;
   border-bottom: 2.4px solid #000;
   background: #fff;
   font-size: 23px;
@@ -18,7 +18,7 @@ header > ul {
     @extend %flexCenter;
     position: relative;
     .logo-png {
-      height: 30px;
+      height: 40px;
       width: 40px;
       background-image: url("../images/black_apple_logo.png");
       background-size: 23px;
@@ -71,9 +71,9 @@ header > ul {
   /* Menu */
   > li:not(.logo-image) {
     position: relative;
-    height: 30px;
+    height: 40px;
     padding: 2px 13px 0 13px;
-    line-height: 30px;
+    line-height: 40px;
     &:hover {
       background: #000;
       color: #fff;
@@ -85,7 +85,7 @@ header > ul {
 }
 
 #user-name {
-  height: 30px;
-  line-height: 30px;
+  height: 40px;
+  line-height: 40px;
   padding: 2px 13px 0 13px;
 }
