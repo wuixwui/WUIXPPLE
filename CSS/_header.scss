@@ -8,7 +8,7 @@ header {
   justify-content: space-between;
   width: 100%;
   height: 40px;
-  padding: 0 30px;
+  padding: 0 20px;
   border-bottom: 2.4px solid #000;
   background: #fff;
   font-size: 23px;
@@ -41,13 +41,13 @@ header > ul {
         &:hover {
           > .ascii-art.drop-menu {
             display: block;
-            width: 200px;
+            width: 300px;
             top: -2px;
-            left: 100%;
+            left: 101%;
             background: url("../images/screentone_2.jpg");
             font-size: 10px !important;
             line-height: 1 !important;
-            letter-spacing: 0.7px;
+            letter-spacing: 3.5px;
           }
         }
       }
