@@ -1,4 +1,4 @@
-a, .drop-menu > ul, .drop-menu li, body, header, header > ul, header > ul li.logo-image, main .pop-up, main .pop-up .name-insert, main .msg--icon .icon {
+a, .drop-menu > ul, .drop-menu li, body, header, header > ul, header > ul li.logo-image, main .pop-up, main .pop-up .name-insert {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -89,9 +89,9 @@ body {
 
 .container {
   overflow: hidden;
-  width: 80%;
-  height: 90%;
-  min-width: 1000px;
+  width: 70%;
+  height: 80%;
+  min-width: 850px;
   min-height: 600px;
   border-radius: 15px;
   background-image: url("../images/screentone_3.jpg");
@@ -232,11 +232,11 @@ main .pop-up .name-insert {
   width: 450px;
   height: 200px;
   background: #fff;
-  font-size: 23px;
+  font-size: 20px;
 }
 
 main .pop-up .name-insert > span {
-  margin-bottom: 30px;
+  margin-bottom: 15px;
 }
 
 main .pop-up .name-insert #user-name-input {
@@ -286,11 +286,15 @@ main .msg--icon .icon {
   position: absolute;
   bottom: 20px;
   right: 20px;
-  width: 40px;
-  height: 40px;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
   background: #fff;
 }
 
 main .msg--icon .icon > img {
-  width: 27px;
+  position: absolute;
+  top: 16%;
+  left: 20%;
+  width: 29px;
 }
