@@ -1,6 +1,5 @@
 @import "_extends";
 @import "_common";
-@import "_header";
 
 body {
   @extend %flexCenter;
@@ -19,4 +18,15 @@ body {
   border-radius: 15px;
   background-image: url("../images/screentone_3.jpg");
   background-size: cover;
+  position: relative;
+}
+
+@import "_header";
+
+main {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
 }
