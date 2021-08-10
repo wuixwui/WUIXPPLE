@@ -1,0 +1,78 @@
+/* HEADER */
+header {
+  @extend %flexCenter;
+  justify-content: space-between;
+  height: 30px;
+  padding: 0 15px;
+  border-bottom: 2.4px solid #000;
+  background: #fff;
+  font-size: 23px;
+}
+header > ul {
+  @extend %flexCenter;
+  & > li {
+    cursor: pointer;
+  }
+  /* Logo */
+  li.logo-image {
+    @extend %flexCenter;
+    position: relative;
+    .logo-png {
+      height: 30px;
+      width: 40px;
+      background-image: url("../images/black_apple_logo.png");
+      background-size: 23px;
+      background-repeat: no-repeat;
+      background-position: center;
+    }
+    > :nth-child(2) {
+      display: inline-block;
+      text-indent: -9999px;
+    }
+    .by-wuix {
+      ul > :first-child {
+        padding: 15px 10px 15px;
+        border-bottom: 2px dotted #777;
+      }
+      ul > :not(:last-child) {
+        cursor: help;
+        &:hover {
+          background: none;
+          color: #cdcdcd;
+        }
+      }
+    }
+    &:hover {
+      background: #000;
+      .logo-png {
+        background-image: url("../images/white_apple_logo.png");
+        background-size: 23px;
+        background-repeat: no-repeat;
+        background-position: center;
+      }
+      .by-wuix {
+        display: block;
+      }
+    }
+  }
+  /* Menu */
+  > li:not(.logo-image) {
+    position: relative;
+    height: 30px;
+    padding: 2px 13px 0 13px;
+    line-height: 30px;
+    &:hover {
+      background: #000;
+      color: #fff;
+      .drop-menu {
+        display: block;
+      }
+    }
+  }
+}
+
+header > .user-name {
+  height: 30px;
+  line-height: 30px;
+  padding: 2px 13px 0 13px;
+}

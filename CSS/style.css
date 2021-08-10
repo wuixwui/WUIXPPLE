@@ -1,4 +1,4 @@
-a, .drop-menu > ul, .drop-menu li, body, header, header > ul, header > ul li.logo-image {
+a, .drop-menu > ul, .drop-menu li, header, header > ul, header > ul li.logo-image, body {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -69,26 +69,6 @@ a {
 
 .drop-menu li:hover a {
   color: #fff;
-}
-
-body {
-  -webkit-box-sizing: border-box;
-          box-sizing: border-box;
-  width: 100vw;
-  height: 100vh;
-  background-color: #000;
-  font-weight: 400;
-  font-family: "NeoDunggeunmo", "VT323", monospace;
-  font-size: 16px;
-}
-
-.container {
-  overflow: hidden;
-  width: 90%;
-  height: 90%;
-  border-radius: 15px;
-  background-image: url("../images/screentine_3.jpg");
-  background-size: cover;
 }
 
 /* HEADER */
@@ -179,4 +159,24 @@ header > .user-name {
   height: 30px;
   line-height: 30px;
   padding: 2px 13px 0 13px;
+}
+
+body {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  width: 100vw;
+  height: 100vh;
+  background-color: #000;
+  font-weight: 400;
+  font-family: "NeoDunggeunmo", "VT323", monospace;
+  font-size: 16px;
+}
+
+.container {
+  overflow: hidden;
+  width: 90%;
+  height: 90%;
+  border-radius: 15px;
+  background-image: url("../images/screentine_3.jpg");
+  background-size: cover;
 }
