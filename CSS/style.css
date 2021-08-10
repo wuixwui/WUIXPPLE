@@ -1,4 +1,4 @@
-a, .drop-menu > ul, .drop-menu li, body, header, header > ul, header > ul li.logo-image {
+a, .drop-menu > ul, .drop-menu li, body, header, header > ul, header > ul li.logo-image, main .pop-up, main .pop-up .name-insert, main .msg--icon .icon {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -8,13 +8,6 @@ a, .drop-menu > ul, .drop-menu li, body, header, header > ul, header > ul li.log
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-}
-
-.shadowBox {
-  background-color: #fff;
-  border: 2.5px solid #000;
-  -webkit-box-shadow: 5px 5px 0 #000;
-          box-shadow: 5px 5px 0 #000;
 }
 
 .drop-menu {
@@ -41,7 +34,19 @@ a {
   height: 100%;
 }
 
+/* display: none */
+.hidden {
+  display: none !important;
+}
+
 /* box style */
+.shadowBox {
+  background-color: #fff;
+  border: 2px solid #000;
+  -webkit-box-shadow: 2px 2px 0 #000;
+          box-shadow: 2px 2px 0 #000;
+}
+
 /* Drop Menu */
 .drop-menu {
   display: none;
@@ -57,7 +62,7 @@ a {
 
 .drop-menu li {
   width: 100%;
-  padding: 10px 15px;
+  padding: 5px 15px;
   cursor: pointer;
   color: #000;
 }
@@ -79,13 +84,13 @@ body {
   background-color: #000;
   font-weight: 400;
   font-family: "NeoDunggeunmo", "VT323", monospace;
-  font-size: 16px;
+  font-size: 20px;
 }
 
 .container {
   overflow: hidden;
-  width: 90%;
-  height: 90%;
+  width: 80%;
+  height: 80%;
   border-radius: 15px;
   background-image: url("../images/screentone_3.jpg");
   background-size: cover;
@@ -180,7 +185,7 @@ header > ul li.logo-image:hover .by-wuix {
 header > ul > li:not(.logo-image) {
   position: relative;
   height: 40px;
-  padding: 2px 13px 0 13px;
+  padding: 3px 13px 0 13px;
   line-height: 40px;
 }
 
@@ -196,7 +201,8 @@ header > ul > li:not(.logo-image):hover .drop-menu {
 #user-name {
   height: 40px;
   line-height: 40px;
-  padding: 2px 13px 0 13px;
+  padding: 3px 13px 0 13px;
+  text-align: right;
 }
 
 main {
@@ -205,4 +211,84 @@ main {
   left: 0;
   width: 100%;
   height: 100%;
+  padding: 40px 10px 0;
+}
+
+/* user name input */
+main .pop-up {
+  width: 100%;
+  height: 100%;
+}
+
+main .pop-up .name-insert {
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  position: relative;
+  z-index: 10;
+  width: 450px;
+  height: 200px;
+  background: #fff;
+  font-size: 23px;
+}
+
+main .pop-up .name-insert > span {
+  margin-bottom: 30px;
+}
+
+main .pop-up .name-insert #user-name-input {
+  background: none;
+  width: 300px;
+  border: none;
+  border-bottom: 2px dotted #777;
+  outline: none;
+  text-align: center;
+  font-size: 23px;
+  font-family: "NeoDunggeunmo", "VT323", monospace;
+}
+
+/* random msg icon */
+main .msg--icon {
+  font-size: 18px;
+}
+
+main .msg--icon .random-msg {
+  position: absolute;
+  bottom: 23px;
+  right: 75px;
+  width: -webkit-max-content;
+  width: -moz-max-content;
+  width: max-content;
+  padding: 8px;
+  text-align: right;
+  color: #000;
+}
+
+main .msg--icon .random-msg:after {
+  content: "";
+  position: absolute;
+  right: 0;
+  top: 50%;
+  width: 0;
+  height: 0;
+  border: 10px solid transparent;
+  border-left-color: #000000;
+  border-right: 0;
+  border-bottom: 0;
+  margin-top: -5px;
+  margin-right: -10px;
+}
+
+main .msg--icon .icon {
+  position: absolute;
+  bottom: 20px;
+  right: 20px;
+  width: 40px;
+  height: 40px;
+  background: #fff;
+}
+
+main .msg--icon .icon > img {
+  width: 27px;
 }

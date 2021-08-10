@@ -36,7 +36,7 @@
             <div class="by-wuix drop-menu shadowBox">
               <ul>
                 <li>
-                  WUIXPPLE
+                  ©WUIXPPLE
                   <div class="ascii-art drop-menu shadowBox">
                     <pre>
                          
@@ -121,11 +121,25 @@
         <div id="user-name">User Name</div>
       </header>
       <main>
-        <div class="name-insert"></div>
+        <div class="pop-up hidden">
+          <form class="name-insert shadowBox">
+            <span>Hi! What's your name?</span>
+            <input
+              id="user-name-input"
+              type="text"
+              autofocus
+              name="userName"
+              maxlength="25"
+              placeholder="Please enter your name"
+            />
+          </form>
+        </div>
         <div class="msg--icon">
-          <div class="random-msg">Hi~</div>
-          <div class="icon">
-            <img src="./images/white_apple_logo.png" alt="white apple logo" />
+          <div class="random-msg shadowBox hidden">
+            Hi~ 오늘 하루는 어땠어요?
+          </div>
+          <div class="icon shadowBox">
+            <img src="./images/black_apple_logo.png" alt="white apple logo" />
           </div>
         </div>
         <div class="todo-container"></div>
