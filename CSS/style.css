@@ -1,4 +1,4 @@
-body, .container > header, .container > header ul, .container > header ul > li.logo-image {
+a, .drop-menu > ul, .drop-menu li, body, header, header > ul, header > ul li.logo-image {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -10,12 +10,70 @@ body, .container > header, .container > header ul, .container > header ul > li.l
           align-items: center;
 }
 
+.shadowBox {
+  background-color: #fff;
+  border: 2.5px solid #000;
+  -webkit-box-shadow: 5px 5px 0 #000;
+          box-shadow: 5px 5px 0 #000;
+}
+
+.drop-menu {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  width: -webkit-max-content;
+  width: -moz-max-content;
+  width: max-content;
+  font-size: 20px;
+  line-height: 20px;
+}
+
+/* COMMON */
 * {
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
 }
 
+a {
+  text-decoration: none;
+  color: #000;
+  width: 100%;
+  height: 100%;
+}
+
+/* box style */
+/* Drop Menu */
+.drop-menu {
+  display: none;
+}
+
+.drop-menu > ul {
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  width: 100%;
+}
+
+.drop-menu li {
+  width: 100%;
+  padding: 10px 15px;
+  cursor: pointer;
+  color: #000;
+}
+
+.drop-menu li:hover {
+  background: #000;
+  color: #fff;
+}
+
+.drop-menu li:hover a {
+  color: #fff;
+}
+
 body {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
   width: 100vw;
   height: 100vh;
   background-color: #000;
@@ -33,7 +91,8 @@ body {
   background-size: cover;
 }
 
-.container > header {
+/* HEADER */
+header {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
@@ -44,7 +103,20 @@ body {
   font-size: 23px;
 }
 
-.container > header ul > li.logo-image:first-child {
+header > ul {
+  /* Logo */
+  /* Menu */
+}
+
+header > ul > li {
+  cursor: pointer;
+}
+
+header > ul li.logo-image {
+  position: relative;
+}
+
+header > ul li.logo-image .logo-png {
   height: 30px;
   width: 40px;
   background-image: url("../images/black_apple_logo.png");
@@ -53,28 +125,58 @@ body {
   background-position: center;
 }
 
-.container > header ul > li.logo-image span:last-of-type {
+header > ul li.logo-image > :nth-child(2) {
   display: inline-block;
   text-indent: -9999px;
 }
 
-.container > header ul > li.logo-image:hover {
+header > ul li.logo-image .by-wuix ul > :first-child {
+  padding: 15px 10px 15px;
+  border-bottom: 2px dotted #777;
+}
+
+header > ul li.logo-image .by-wuix ul > :not(:last-child) {
+  cursor: help;
+}
+
+header > ul li.logo-image .by-wuix ul > :not(:last-child):hover {
+  background: none;
+  color: #cdcdcd;
+}
+
+header > ul li.logo-image:hover {
   background: #000;
 }
 
-.container > header ul > li.logo-image:hover:first-child {
+header > ul li.logo-image:hover .logo-png {
   background-image: url("../images/white_apple_logo.png");
   background-size: 23px;
   background-repeat: no-repeat;
   background-position: center;
 }
 
-.container > header ul > li {
-  line-height: 30px;
-  padding: 3px 13px 0 13px;
+header > ul li.logo-image:hover .by-wuix {
+  display: block;
 }
 
-.container > header ul > li:hover {
+header > ul > li:not(.logo-image) {
+  position: relative;
+  height: 30px;
+  padding: 2px 13px 0 13px;
+  line-height: 30px;
+}
+
+header > ul > li:not(.logo-image):hover {
   background: #000;
   color: #fff;
+}
+
+header > ul > li:not(.logo-image):hover .drop-menu {
+  display: block;
+}
+
+header > .user-name {
+  height: 30px;
+  line-height: 30px;
+  padding: 2px 13px 0 13px;
 }

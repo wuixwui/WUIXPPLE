@@ -1,0 +1,39 @@
+/* COMMON */
+* {
+  box-sizing: border-box;
+}
+a {
+  @extend %flexCenter;
+  text-decoration: none;
+  color: #000;
+  width: 100%;
+  height: 100%;
+}
+/* box style */
+.shadowBox {
+  @extend %shadowBox;
+}
+/* Drop Menu */
+.drop-menu {
+  display: none;
+  @extend %dropMenuContainer;
+  > ul {
+    @extend %flexCenter;
+    flex-direction: column;
+    width: 100%;
+  }
+  li {
+    @extend %flexCenter;
+    width: 100%;
+    padding: 10px 15px;
+    cursor: pointer;
+    color: #000;
+    &:hover {
+      background: #000;
+      color: #fff;
+      a {
+        color: #fff;
+      }
+    }
+  }
+}
