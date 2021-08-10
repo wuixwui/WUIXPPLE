@@ -115,13 +115,25 @@ header > ul li.logo-image .by-wuix ul > :first-child {
   border-bottom: 2px dotted #777;
 }
 
+header > ul li.logo-image .by-wuix ul > :first-child:hover > .ascii-art.drop-menu {
+  display: block;
+  width: 200px;
+  top: -2px;
+  left: 100%;
+  background: url("../images/screentone_2.jpg");
+  font-size: 10px !important;
+  line-height: 1 !important;
+  letter-spacing: 0.7px;
+}
+
 header > ul li.logo-image .by-wuix ul > :not(:last-child) {
   cursor: help;
+  color: #cdcdcd;
 }
 
 header > ul li.logo-image .by-wuix ul > :not(:last-child):hover {
   background: none;
-  color: #cdcdcd;
+  color: #000;
 }
 
 header > ul li.logo-image:hover {
@@ -177,6 +189,6 @@ body {
   width: 90%;
   height: 90%;
   border-radius: 15px;
-  background-image: url("../images/screentine_3.jpg");
+  background-image: url("../images/screentone_3.jpg");
   background-size: cover;
 }

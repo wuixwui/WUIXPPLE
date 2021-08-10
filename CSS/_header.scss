@@ -33,12 +33,25 @@ header > ul {
       ul > :first-child {
         padding: 15px 10px 15px;
         border-bottom: 2px dotted #777;
+        &:hover {
+          > .ascii-art.drop-menu {
+            display: block;
+            width: 200px;
+            top: -2px;
+            left: 100%;
+            background: url("../images/screentone_2.jpg");
+            font-size: 10px !important;
+            line-height: 1 !important;
+            letter-spacing: 0.7px;
+          }
+        }
       }
       ul > :not(:last-child) {
         cursor: help;
+        color: #cdcdcd;
         &:hover {
           background: none;
-          color: #cdcdcd;
+          color: #000;
         }
       }
     }
