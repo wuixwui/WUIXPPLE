@@ -9,9 +9,15 @@ a {
   width: 100%;
   height: 100%;
 }
+/* display: none */
+.hidden {
+  display: none !important;
+}
 /* box style */
 .shadowBox {
-  @extend %shadowBox;
+  background-color: #fff;
+  border: 2px solid #000;
+  box-shadow: 2px 2px 0 #000;
 }
 /* Drop Menu */
 .drop-menu {
@@ -25,7 +31,7 @@ a {
   li {
     @extend %flexCenter;
     width: 100%;
-    padding: 10px 15px;
+    padding: 5px 15px;
     cursor: pointer;
     color: #000;
     &:hover {
