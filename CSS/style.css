@@ -10,17 +10,6 @@ a, .drop-menu > ul, .drop-menu li, body, header, header > ul, header > ul li.log
           align-items: center;
 }
 
-.drop-menu {
-  position: absolute;
-  top: 100%;
-  left: 0;
-  width: -webkit-max-content;
-  width: -moz-max-content;
-  width: max-content;
-  font-size: 20px;
-  line-height: 20px;
-}
-
 /* COMMON */
 * {
   -webkit-box-sizing: border-box;
@@ -50,6 +39,14 @@ a {
 /* Drop Menu */
 .drop-menu {
   display: none;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  width: -webkit-max-content;
+  width: -moz-max-content;
+  width: max-content;
+  font-size: 20px;
+  line-height: 20px;
 }
 
 .drop-menu > ul {

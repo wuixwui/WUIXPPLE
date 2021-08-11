@@ -22,7 +22,12 @@ a {
 /* Drop Menu */
 .drop-menu {
   display: none;
-  @extend %dropMenuContainer;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  width: max-content;
+  font-size: 20px;
+  line-height: 20px;
   > ul {
     @extend %flexCenter;
     flex-direction: column;
