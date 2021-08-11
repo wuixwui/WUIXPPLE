@@ -254,8 +254,8 @@ main .msg--icon {
 
 main .msg--icon .random-msg {
   position: absolute;
-  bottom: 23px;
-  right: 75px;
+  bottom: 38px;
+  right: 86px;
   width: -webkit-max-content;
   width: -moz-max-content;
   width: max-content;
@@ -268,7 +268,7 @@ main .msg--icon .random-msg:after {
   content: "";
   position: absolute;
   right: 0;
-  top: 50%;
+  top: 70%;
   width: 0;
   height: 0;
   border: 10px solid transparent;
@@ -276,7 +276,7 @@ main .msg--icon .random-msg:after {
   border-right: 0;
   border-bottom: 0;
   margin-top: -5px;
-  margin-right: -10px;
+  margin-right: -12px;
 }
 
 main .msg--icon .icon {
