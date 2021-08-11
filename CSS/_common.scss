@@ -1,13 +1,13 @@
 /* COMMON */
 * {
   box-sizing: border-box;
+  letter-spacing: 1.4px;
 }
 a {
-  @extend %flexCenter;
+  display: block;
   text-decoration: none;
   color: #000;
-  width: 100%;
-  height: 100%;
+  text-align: center;
 }
 /* display: none */
 .hidden {
@@ -16,7 +16,7 @@ a {
 /* box style */
 .shadowBox {
   background-color: #fff;
-  border: 2px solid #000;
+  border: 1px solid #000;
   box-shadow: 2px 2px 0 #000;
 }
 /* Drop Menu */
@@ -27,17 +27,17 @@ a {
   left: 0;
   width: max-content;
   font-size: 20px;
-  line-height: 20px;
-  > ul {
+  line-height: 22px;
+  ul {
     @extend %flexCenter;
     flex-direction: column;
     width: 100%;
+    height: 100%;
   }
   li {
     @extend %flexCenter;
     width: 100%;
     padding: 6px 30px;
-    cursor: pointer;
     color: #000;
     &:hover {
       background: #000;
@@ -46,5 +46,12 @@ a {
         color: #fff;
       }
     }
+  }
+}
+li.link {
+  padding: 0 !important;
+  a {
+    width: 100%;
+    padding: 6px 30px;
   }
 }

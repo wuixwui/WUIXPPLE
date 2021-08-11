@@ -1,4 +1,4 @@
-a, .drop-menu > ul, .drop-menu li, body, header, header > ul, header > ul li.logo-image, main .pop-up, main .pop-up .name-insert {
+.drop-menu ul, .drop-menu li, body, header, header > ul, header > ul li.logo-image, main .pop-up, main .pop-up .name-insert {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -14,13 +14,14 @@ a, .drop-menu > ul, .drop-menu li, body, header, header > ul, header > ul li.log
 * {
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
+  letter-spacing: 1.4px;
 }
 
 a {
+  display: block;
   text-decoration: none;
   color: #000;
-  width: 100%;
-  height: 100%;
+  text-align: center;
 }
 
 /* display: none */
@@ -31,7 +32,7 @@ a {
 /* box style */
 .shadowBox {
   background-color: #fff;
-  border: 2px solid #000;
+  border: 1px solid #000;
   -webkit-box-shadow: 2px 2px 0 #000;
           box-shadow: 2px 2px 0 #000;
 }
@@ -46,21 +47,21 @@ a {
   width: -moz-max-content;
   width: max-content;
   font-size: 20px;
-  line-height: 20px;
+  line-height: 22px;
 }
 
-.drop-menu > ul {
+.drop-menu ul {
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
   width: 100%;
+  height: 100%;
 }
 
 .drop-menu li {
   width: 100%;
   padding: 6px 30px;
-  cursor: pointer;
   color: #000;
 }
 
@@ -73,9 +74,16 @@ a {
   color: #fff;
 }
 
+li.link {
+  padding: 0 !important;
+}
+
+li.link a {
+  width: 100%;
+  padding: 6px 30px;
+}
+
 body {
-  -webkit-box-sizing: border-box;
-          box-sizing: border-box;
   width: 100vw;
   height: 100vh;
   background-color: #000;
@@ -108,7 +116,7 @@ header {
   width: 100%;
   height: 40px;
   padding: 0 20px;
-  border-bottom: 2.4px solid #000;
+  border-bottom: 2px solid #000;
   background: #fff;
   font-size: 23px;
 }
