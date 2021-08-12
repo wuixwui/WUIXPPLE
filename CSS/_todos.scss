@@ -5,6 +5,7 @@
   top: 70px;
   right: 35px;
   width: 45vw;
+  min-width: 520px;
   .todo__name {
     @extend %flexCenter;
     width: 100%;
