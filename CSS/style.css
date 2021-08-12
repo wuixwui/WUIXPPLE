@@ -1,0 +1,500 @@
+.drop-menu ul, .pop-up, .pop-up .name-insert, body, header, header > ul, header > ul li.logo-image, header > ul li.logo-image .by-wuix ul > :first-child, .todo-container .todo__name, .todo-container form.todo__input-bar, .todo-container .todo__list-container .todo-list .todo-item, .todo-container .todo__list-container .todo-list .todo-item > span, .today-container .today__name, .today-container .today__day-container, .today-container .today__day-container > * {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+/* COMMON */
+* {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  letter-spacing: 1.4px;
+}
+
+a {
+  display: block;
+  text-decoration: none;
+  color: #000;
+}
+
+/* display: none */
+.hidden {
+  display: none !important;
+}
+
+/* box style */
+.shadowBox {
+  background-color: #fff;
+  border: 2.5px solid #000;
+  -webkit-box-shadow: 2.5px 2.5px 0 #000;
+          box-shadow: 2.5px 2.5px 0 #000;
+}
+
+/* Drop Menu */
+.drop-menu {
+  display: none;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  width: -webkit-max-content;
+  width: -moz-max-content;
+  width: max-content;
+  font-size: 24px;
+  line-height: 24px;
+}
+
+.drop-menu ul {
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  width: 100%;
+  height: 100%;
+}
+
+.drop-menu li {
+  width: 100%;
+  padding: 6px 30px 6px 15px;
+  color: #000;
+}
+
+.drop-menu li:hover {
+  background: #000;
+  color: #fff;
+}
+
+.drop-menu li:hover a {
+  color: #fff;
+}
+
+li.link {
+  padding: 0 !important;
+}
+
+li.link a {
+  width: 100%;
+  padding: 6px 30px 6px 15px;
+}
+
+/* button */
+.btn {
+  background: url("../images/screentone_2.jpg");
+  border: 4px outset #cecece;
+  padding: 8px 10px;
+  margin-left: 6px;
+  font-size: 24px;
+  font-family: "NeoDunggeunmo", "VT323", monospace;
+  color: #000;
+}
+
+.btn:active {
+  background: url("../images/screentone_3.jpg");
+  border: 4px inset #cdcdcd;
+}
+
+/* random msg icon */
+.msg--icon {
+  z-index: 9;
+  font-size: 24px;
+}
+
+.msg--icon .random-msg {
+  position: absolute;
+  bottom: 43px;
+  right: 91px;
+  width: -webkit-max-content;
+  width: -moz-max-content;
+  width: max-content;
+  padding: 10px 15px;
+  text-align: right;
+  color: #000;
+}
+
+.msg--icon .random-msg:after {
+  content: "";
+  position: absolute;
+  right: 0;
+  top: 70%;
+  width: 0;
+  height: 0;
+  border: 12px solid transparent;
+  border-left-color: #000000;
+  border-right: 0;
+  border-bottom: 0;
+  margin-top: -5px;
+  margin-right: -13px;
+}
+
+.msg--icon .icon {
+  position: absolute;
+  bottom: 25px;
+  right: 25px;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  background: #fff;
+}
+
+.msg--icon .icon > img {
+  position: absolute;
+  top: 16%;
+  left: 20%;
+  width: 29px;
+}
+
+.pop-up {
+  width: 100%;
+  height: 100%;
+}
+
+.pop-up .name-insert {
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  position: relative;
+  z-index: 10;
+  width: 450px;
+  height: 200px;
+  background: #fff;
+}
+
+.pop-up .name-insert > span {
+  margin-bottom: 15px;
+}
+
+.pop-up .name-insert #user-name-input {
+  background: none;
+  width: 350px;
+  border: none;
+  border-bottom: 2px dotted #888;
+  outline: none;
+  text-align: center;
+  font-size: 27px;
+  font-family: "NeoDunggeunmo", "VT323", monospace;
+  color: #000;
+}
+
+.pop-up .name-insert #user-name-input::-webkit-input-placeholder {
+  color: #888;
+  font-size: 25px;
+}
+
+.pop-up .name-insert #user-name-input:-ms-input-placeholder {
+  color: #888;
+  font-size: 25px;
+}
+
+.pop-up .name-insert #user-name-input::-ms-input-placeholder {
+  color: #888;
+  font-size: 25px;
+}
+
+.pop-up .name-insert #user-name-input::placeholder {
+  color: #888;
+  font-size: 25px;
+}
+
+body {
+  width: 100vw;
+  height: 100vh;
+  background-color: #000;
+  font-weight: 400;
+  font-family: "NeoDunggeunmo", "VT323", monospace;
+  font-size: 24px;
+}
+
+.container {
+  overflow: hidden;
+  position: relative;
+  width: 60vw;
+  height: 40vw;
+  min-width: 800px;
+  min-height: 580px;
+  border-radius: 15px;
+  background: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 0.4))), url("../images/screentone_2.jpg");
+  background: linear-gradient(to bottom, rgba(0, 0, 0, 0.4)), url("../images/screentone_2.jpg");
+  background-size: cover;
+}
+
+header {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 5;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  width: 100%;
+  height: 40px;
+  padding: 0 20px;
+  border-bottom: 2.5px solid #000;
+  background: #fff;
+  font-size: 27px;
+}
+
+header > ul {
+  /* Logo */
+  /* Menu */
+}
+
+header > ul > li {
+  cursor: pointer;
+}
+
+header > ul li.logo-image {
+  position: relative;
+}
+
+header > ul li.logo-image .logo-png {
+  height: 40px;
+  width: 40px;
+  background-image: url("../images/black_apple_logo.png");
+  background-size: 23px;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+header > ul li.logo-image > :nth-child(2) {
+  display: inline-block;
+  text-indent: -9999px;
+}
+
+header > ul li.logo-image .by-wuix ul > :first-child {
+  padding: 20px 0;
+  border-bottom: 2px dotted #888;
+}
+
+header > ul li.logo-image .by-wuix ul > :first-child:hover .ascii-art {
+  display: block;
+  width: 300px;
+  top: -1px;
+  left: 100%;
+  background: url("../images/screentone_2.jpg");
+}
+
+header > ul li.logo-image .by-wuix ul > :first-child:hover .ascii-art pre {
+  font-size: 10px;
+  line-height: 1;
+  letter-spacing: 3.5px;
+}
+
+header > ul li.logo-image .by-wuix ul > :not(:last-child) {
+  cursor: help;
+  color: #888;
+}
+
+header > ul li.logo-image .by-wuix ul > :not(:last-child):hover {
+  background: none;
+  color: #000;
+}
+
+header > ul li.logo-image:hover {
+  background: #000;
+}
+
+header > ul li.logo-image:hover .logo-png {
+  background-image: url("../images/white_apple_logo.png");
+  background-size: 23px;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+header > ul li.logo-image:hover .by-wuix {
+  display: block;
+}
+
+header > ul > li:not(.logo-image) {
+  position: relative;
+  height: 40px;
+  padding: 3px 13px 0 13px;
+  line-height: 40px;
+}
+
+header > ul > li:not(.logo-image):hover {
+  background: #000;
+  color: #fff;
+}
+
+header > ul > li:not(.logo-image):hover .drop-menu {
+  display: block;
+}
+
+#user-name {
+  height: 40px;
+  line-height: 40px;
+  padding: 3px 13px 0 13px;
+  text-align: right;
+}
+
+main {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  padding: 40px 10px 0;
+}
+
+/* Todos */
+.todo-container {
+  z-index: 2;
+  position: absolute;
+  top: 70px;
+  right: 35px;
+  width: 45vw;
+  min-width: 520px;
+}
+
+.todo-container .todo__name {
+  width: 100%;
+  height: 40px;
+  font-size: 28px;
+}
+
+.todo-container form.todo__input-bar {
+  position: relative;
+  z-index: 3;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  width: 100%;
+  height: 55px;
+  padding: 0 5px 0 20px;
+  background: url("../images/screentone_2.jpg");
+  border-top: 2px solid #000;
+  border-bottom: 3px solid #000;
+}
+
+.todo-container form.todo__input-bar #todo--input {
+  width: 72%;
+  height: 40px;
+  padding-right: 10px;
+  border: none;
+  border: 3px inset #000;
+  text-align: right;
+  font-size: 24px;
+  font-family: "NeoDunggeunmo", "VT323", monospace;
+}
+
+.todo-container form.todo__input-bar #todo--input::-webkit-input-placeholder {
+  color: #888;
+  font-size: 22px;
+}
+
+.todo-container form.todo__input-bar #todo--input:-ms-input-placeholder {
+  color: #888;
+  font-size: 22px;
+}
+
+.todo-container form.todo__input-bar #todo--input::-ms-input-placeholder {
+  color: #888;
+  font-size: 22px;
+}
+
+.todo-container form.todo__input-bar #todo--input::placeholder {
+  color: #888;
+  font-size: 22px;
+}
+
+.todo-container form.todo__input-bar #todo--input:focus {
+  outline: none;
+  background: #fff;
+}
+
+.todo-container form.todo__input-bar #todo--input:focus::-webkit-input-placeholder {
+  color: #fff;
+}
+
+.todo-container form.todo__input-bar #todo--input:focus:-ms-input-placeholder {
+  color: #fff;
+}
+
+.todo-container form.todo__input-bar #todo--input:focus::-ms-input-placeholder {
+  color: #fff;
+}
+
+.todo-container form.todo__input-bar #todo--input:focus::placeholder {
+  color: #fff;
+}
+
+.todo-container .todo__list-container .todo-list {
+  overflow: auto;
+  max-height: 20vw;
+  padding: 3px;
+  background: #000;
+  border: 2px solid #fff;
+}
+
+.todo-container .todo__list-container .todo-list .todo-item {
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+  padding: 10px;
+  width: 100%;
+  height: 80px;
+  background: #fff;
+  border: 6px double #000;
+}
+
+.todo-container .todo__list-container .todo-list .todo-item > span {
+  font-size: 24px;
+  margin-right: 5px;
+  overflow: hidden;
+  height: 60px;
+}
+
+.today-container {
+  z-index: 1;
+  position: absolute;
+  overflow: hidden;
+  bottom: 30px;
+  left: 30px;
+  width: 15vw;
+  height: 20vw;
+  min-width: 240px;
+  min-height: 340px;
+  background: #000;
+  border-radius: 18px;
+}
+
+.today-container .today__name {
+  height: 40px;
+  font-size: 28px;
+  color: #fff;
+}
+
+.today-container .today__name .square {
+  width: 20px;
+  height: 20px;
+  margin-right: 10px;
+  border: 2px solid #fff;
+}
+
+.today-container .today__day-container {
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  position: absolute;
+  top: 40px;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  padding: 20px;
+  border-radius: 18px 18px 0 0;
+  background-image: url("../images/screentone_1.jpg");
+}
+
+.today-container .today__day-container > * {
+  width: 100%;
+  height: 70%;
+  margin-bottom: 15px;
+  padding: 15px;
+}
