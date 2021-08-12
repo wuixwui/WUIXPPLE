@@ -1,7 +1,7 @@
 /* random msg icon */
 .msg--icon {
   z-index: 9;
-  font-size: 20px;
+  font-size: 24px;
   .random-msg {
     position: absolute;
     bottom: 43px;
@@ -18,12 +18,12 @@
     top: 70%;
     width: 0;
     height: 0;
-    border: 10px solid transparent;
+    border: 12px solid transparent;
     border-left-color: #000000;
     border-right: 0;
     border-bottom: 0;
     margin-top: -5px;
-    margin-right: -12px;
+    margin-right: -13px;
   }
   .icon {
     position: absolute;
