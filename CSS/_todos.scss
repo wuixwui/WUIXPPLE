@@ -1,0 +1,80 @@
+/* Todos */
+.todo-container {
+  z-index: 2;
+  position: absolute;
+  top: 70px;
+  right: 35px;
+  width: 40vw;
+  height: 25vw;
+  min-width: 600px;
+  min-height: 350px;
+  .todo__name {
+    @extend %flexCenter;
+    width: 100%;
+    height: 40px;
+    font-size: 28px;
+  }
+  form.todo__input-bar {
+    @extend %flexCenter;
+    position: relative;
+    z-index: 3;
+    justify-content: space-between;
+    width: 100%;
+    height: 55px;
+    padding: 0 5px 0 20px;
+    background: url("../images/screentone_2.jpg");
+    border-top: 2px solid #000;
+    border-bottom: 3px solid #000;
+    #todo--input {
+      width: 72%;
+      height: 40px;
+      padding-right: 10px;
+      border: none;
+      border: 3px inset #000;
+      text-align: right;
+      font-size: 24px;
+      font-family: "NeoDunggeunmo", "VT323", monospace;
+      &::placeholder {
+        color: #888;
+        font-size: 22px;
+      }
+      &:focus {
+        outline: none;
+        background: #fff;
+        &::placeholder {
+          color: #fff;
+        }
+      }
+    }
+  }
+}
+.todo-container .todo__list-container {
+  position: absolute;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  padding-top: 95px;
+  ul.todo-list {
+    overflow: auto;
+    height: 100%;
+    padding: 3px;
+    background: #000;
+    border: 2px solid #fff;
+    .todo-item {
+      @extend %flexCenter;
+      justify-content: flex-end;
+      padding: 10px;
+      width: 100%;
+      height: 80px;
+      background: #fff;
+      border: 6px double #000;
+      > span {
+        @extend %flexCenter;
+        font-size: 24px;
+        margin-right: 5px;
+        overflow: hidden;
+        height: 60px;
+      }
+    }
+  }
+}

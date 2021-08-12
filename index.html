@@ -83,7 +83,7 @@
           </li>
           <li>
             Link
-            <div class="drop-menu shadowBox">
+            <nav class="drop-menu shadowBox">
               <ul>
                 <li class="link">
                   <a href="https://www.google.com/" target="_blank">google</a>
@@ -104,7 +104,7 @@
                   <a href="https://velog.io/" target="_blank">velog</a>
                 </li>
               </ul>
-            </div>
+            </nav>
           </li>
           <li>
             Edit
@@ -128,14 +128,14 @@
         <div id="user-name">User Name</div>
       </header>
       <main>
-        <div class="pop-up">
+        <div class="pop-up hidden">
           <form class="name-insert shadowBox">
             <span>Hi! What's your name?</span>
             <input
               id="user-name-input"
               type="text"
-              autofocus
-              name="userName"
+              name="name"
+              value=""
               maxlength="25"
               placeholder="Please enter your name"
             />
@@ -147,7 +147,32 @@
             <img src="./images/black_apple_logo.png" alt="white apple logo" />
           </div>
         </div>
-        <div class="todo-container"></div>
+        <div class="todo-container shadowBox">
+          <div class="todo__name">To Do System</div>
+          <form class="todo__input-bar">
+            <div>
+              <span class="todo-num">0</span>
+              <span>apples</span>
+            </div>
+            <input
+              id="todo--input"
+              type="text"
+              name="todo"
+              value=""
+              maxlength="50"
+              placeholder="오늘은 뭘 해볼까요?"
+            />
+          </form>
+          <div class="todo__list-container">
+            <ul class="todo-list">
+              <li class="todo-item">
+                <span>해야할 일들을 적어보아요~</span>
+                <button class="btn todo__btn--success">success</button>
+                <button class="btn todo__btn--delete">delete</button>
+              </li>
+            </ul>
+          </div>
+        </div>
         <div class="today-container">
           <div class="today--date"></div>
           <div class="today--time"></div>
