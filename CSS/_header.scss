@@ -36,18 +36,20 @@ header > ul {
     }
     .by-wuix {
       ul > :first-child {
-        padding: 15px 10px 15px;
+        padding: 20px 0;
         border-bottom: 2px dotted #777;
         &:hover {
-          > .ascii-art.drop-menu {
+          .ascii-art {
             display: block;
             width: 300px;
-            top: -2px;
-            left: 101%;
+            top: -1px;
+            left: 100%;
             background: url("../images/screentone_2.jpg");
-            font-size: 10px !important;
-            line-height: 1 !important;
-            letter-spacing: 3.5px;
+            pre {
+              font-size: 10px;
+              line-height: 1;
+              letter-spacing: 3.5px;
+            }
           }
         }
       }
