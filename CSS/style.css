@@ -1,4 +1,4 @@
-.drop-menu ul, .drop-menu li, body, header, header > ul, header > ul li.logo-image, main .pop-up, main .pop-up .name-insert {
+.drop-menu ul, .pop-up, .pop-up .name-insert, body, header, header > ul, header > ul li.logo-image, header > ul li.logo-image .by-wuix ul > :first-child, .todo-container .todo__name, .todo-container form.todo__input-bar, .todo-container .todo__list-container ul.todo-list .todo-item, .todo-container .todo__list-container ul.todo-list .todo-item > span {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -21,7 +21,6 @@ a {
   display: block;
   text-decoration: none;
   color: #000;
-  text-align: center;
 }
 
 /* display: none */
@@ -32,9 +31,9 @@ a {
 /* box style */
 .shadowBox {
   background-color: #fff;
-  border: 1px solid #000;
-  -webkit-box-shadow: 2px 2px 0 #000;
-          box-shadow: 2px 2px 0 #000;
+  border: 2.5px solid #000;
+  -webkit-box-shadow: 2.5px 2.5px 0 #000;
+          box-shadow: 2.5px 2.5px 0 #000;
 }
 
 /* Drop Menu */
@@ -46,8 +45,8 @@ a {
   width: -webkit-max-content;
   width: -moz-max-content;
   width: max-content;
-  font-size: 20px;
-  line-height: 22px;
+  font-size: 24px;
+  line-height: 24px;
 }
 
 .drop-menu ul {
@@ -61,7 +60,7 @@ a {
 
 .drop-menu li {
   width: 100%;
-  padding: 6px 30px;
+  padding: 6px 30px 6px 15px;
   color: #000;
 }
 
@@ -80,7 +79,126 @@ li.link {
 
 li.link a {
   width: 100%;
-  padding: 6px 30px;
+  padding: 6px 30px 6px 15px;
+}
+
+/* button */
+.btn {
+  background: url("../images/screentone_2.jpg");
+  border: 4px outset #cecece;
+  padding: 8px 10px;
+  margin-left: 6px;
+  font-size: 24px;
+  font-family: "NeoDunggeunmo", "VT323", monospace;
+  color: #000;
+}
+
+.btn:active {
+  background: url("../images/screentone_3.jpg");
+  border: 4px inset #cdcdcd;
+}
+
+/* random msg icon */
+.msg--icon {
+  z-index: 9;
+  font-size: 20px;
+}
+
+.msg--icon .random-msg {
+  position: absolute;
+  bottom: 43px;
+  right: 91px;
+  width: -webkit-max-content;
+  width: -moz-max-content;
+  width: max-content;
+  padding: 10px 15px;
+  text-align: right;
+  color: #000;
+}
+
+.msg--icon .random-msg:after {
+  content: "";
+  position: absolute;
+  right: 0;
+  top: 70%;
+  width: 0;
+  height: 0;
+  border: 10px solid transparent;
+  border-left-color: #000000;
+  border-right: 0;
+  border-bottom: 0;
+  margin-top: -5px;
+  margin-right: -12px;
+}
+
+.msg--icon .icon {
+  position: absolute;
+  bottom: 25px;
+  right: 25px;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  background: #fff;
+}
+
+.msg--icon .icon > img {
+  position: absolute;
+  top: 16%;
+  left: 20%;
+  width: 29px;
+}
+
+.pop-up {
+  width: 100%;
+  height: 100%;
+}
+
+.pop-up .name-insert {
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  position: relative;
+  z-index: 10;
+  width: 450px;
+  height: 200px;
+  background: #fff;
+}
+
+.pop-up .name-insert > span {
+  margin-bottom: 15px;
+}
+
+.pop-up .name-insert #user-name-input {
+  background: none;
+  width: 350px;
+  border: none;
+  border-bottom: 2px dotted #888;
+  outline: none;
+  text-align: center;
+  font-size: 27px;
+  font-family: "NeoDunggeunmo", "VT323", monospace;
+  color: #000;
+}
+
+.pop-up .name-insert #user-name-input::-webkit-input-placeholder {
+  color: #888;
+  font-size: 25px;
+}
+
+.pop-up .name-insert #user-name-input:-ms-input-placeholder {
+  color: #888;
+  font-size: 25px;
+}
+
+.pop-up .name-insert #user-name-input::-ms-input-placeholder {
+  color: #888;
+  font-size: 25px;
+}
+
+.pop-up .name-insert #user-name-input::placeholder {
+  color: #888;
+  font-size: 25px;
 }
 
 body {
@@ -89,14 +207,14 @@ body {
   background-color: #000;
   font-weight: 400;
   font-family: "NeoDunggeunmo", "VT323", monospace;
-  font-size: 20px;
+  font-size: 24px;
 }
 
 .container {
   overflow: hidden;
   position: relative;
-  width: 100vh;
-  height: 70vh;
+  width: 70vw;
+  height: 45vw;
   min-width: 800px;
   min-height: 580px;
   border-radius: 15px;
@@ -104,21 +222,20 @@ body {
   background-size: 120%;
 }
 
-/* HEADER */
 header {
   position: absolute;
   top: 0;
   left: 0;
-  z-index: 2;
+  z-index: 5;
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
   width: 100%;
   height: 40px;
   padding: 0 20px;
-  border-bottom: 2px solid #000;
+  border-bottom: 2.5px solid #000;
   background: #fff;
-  font-size: 23px;
+  font-size: 27px;
 }
 
 header > ul {
@@ -150,7 +267,7 @@ header > ul li.logo-image > :nth-child(2) {
 
 header > ul li.logo-image .by-wuix ul > :first-child {
   padding: 20px 0;
-  border-bottom: 2px dotted #777;
+  border-bottom: 2px dotted #888;
 }
 
 header > ul li.logo-image .by-wuix ul > :first-child:hover .ascii-art {
@@ -169,7 +286,7 @@ header > ul li.logo-image .by-wuix ul > :first-child:hover .ascii-art pre {
 
 header > ul li.logo-image .by-wuix ul > :not(:last-child) {
   cursor: help;
-  color: #cdcdcd;
+  color: #888;
 }
 
 header > ul li.logo-image .by-wuix ul > :not(:last-child):hover {
@@ -224,85 +341,120 @@ main {
   padding: 40px 10px 0;
 }
 
-/* user name input */
-main .pop-up {
+/* Todos */
+.todo-container {
+  z-index: 2;
+  position: absolute;
+  top: 70px;
+  right: 35px;
+  width: 40vw;
+  height: 25vw;
+  min-width: 600px;
+  min-height: 350px;
+}
+
+.todo-container .todo__name {
   width: 100%;
-  height: 100%;
+  height: 40px;
+  font-size: 28px;
 }
 
-main .pop-up .name-insert {
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
+.todo-container form.todo__input-bar {
   position: relative;
-  z-index: 10;
-  width: 450px;
-  height: 200px;
-  background: #fff;
-  font-size: 20px;
+  z-index: 3;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  width: 100%;
+  height: 55px;
+  padding: 0 5px 0 20px;
+  background: url("../images/screentone_2.jpg");
+  border-top: 2px solid #000;
+  border-bottom: 3px solid #000;
 }
 
-main .pop-up .name-insert > span {
-  margin-bottom: 15px;
-}
-
-main .pop-up .name-insert #user-name-input {
-  background: none;
-  width: 300px;
+.todo-container form.todo__input-bar #todo--input {
+  width: 72%;
+  height: 40px;
+  padding-right: 10px;
   border: none;
-  border-bottom: 2px dotted #777;
-  outline: none;
-  text-align: center;
-  font-size: 23px;
+  border: 3px inset #000;
+  text-align: right;
+  font-size: 24px;
   font-family: "NeoDunggeunmo", "VT323", monospace;
 }
 
-/* random msg icon */
-main .msg--icon {
-  font-size: 18px;
+.todo-container form.todo__input-bar #todo--input::-webkit-input-placeholder {
+  color: #888;
+  font-size: 22px;
 }
 
-main .msg--icon .random-msg {
-  position: absolute;
-  bottom: 38px;
-  right: 86px;
-  width: -webkit-max-content;
-  width: -moz-max-content;
-  width: max-content;
-  padding: 8px;
-  text-align: right;
-  color: #000;
+.todo-container form.todo__input-bar #todo--input:-ms-input-placeholder {
+  color: #888;
+  font-size: 22px;
 }
 
-main .msg--icon .random-msg:after {
-  content: "";
-  position: absolute;
-  right: 0;
-  top: 70%;
-  width: 0;
-  height: 0;
-  border: 10px solid transparent;
-  border-left-color: #000000;
-  border-right: 0;
-  border-bottom: 0;
-  margin-top: -5px;
-  margin-right: -12px;
+.todo-container form.todo__input-bar #todo--input::-ms-input-placeholder {
+  color: #888;
+  font-size: 22px;
 }
 
-main .msg--icon .icon {
-  position: absolute;
-  bottom: 20px;
-  right: 20px;
-  width: 50px;
-  height: 50px;
-  border-radius: 50%;
+.todo-container form.todo__input-bar #todo--input::placeholder {
+  color: #888;
+  font-size: 22px;
+}
+
+.todo-container form.todo__input-bar #todo--input:focus {
+  outline: none;
   background: #fff;
 }
 
-main .msg--icon .icon > img {
+.todo-container form.todo__input-bar #todo--input:focus::-webkit-input-placeholder {
+  color: #fff;
+}
+
+.todo-container form.todo__input-bar #todo--input:focus:-ms-input-placeholder {
+  color: #fff;
+}
+
+.todo-container form.todo__input-bar #todo--input:focus::-ms-input-placeholder {
+  color: #fff;
+}
+
+.todo-container form.todo__input-bar #todo--input:focus::placeholder {
+  color: #fff;
+}
+
+.todo-container .todo__list-container {
   position: absolute;
-  top: 16%;
-  left: 20%;
-  width: 29px;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  padding-top: 95px;
+}
+
+.todo-container .todo__list-container ul.todo-list {
+  overflow: auto;
+  height: 100%;
+  padding: 3px;
+  background: #000;
+  border: 2px solid #fff;
+}
+
+.todo-container .todo__list-container ul.todo-list .todo-item {
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+  padding: 10px;
+  width: 100%;
+  height: 80px;
+  background: #fff;
+  border: 6px double #000;
+}
+
+.todo-container .todo__list-container ul.todo-list .todo-item > span {
+  font-size: 24px;
+  margin-right: 5px;
+  overflow: hidden;
+  height: 60px;
 }
