@@ -15,13 +15,14 @@ body {
 .container {
   overflow: hidden;
   position: relative;
-  width: 70vw;
-  height: 45vw;
+  width: 60vw;
+  height: 40vw;
   min-width: 800px;
   min-height: 580px;
   border-radius: 15px;
-  background-image: url("../images/screentone_3.jpg");
-  background-size: 120%;
+  background: linear-gradient(to bottom, rgba(0, 0, 0, 0.4)),
+    url("../images/screentone_2.jpg");
+  background-size: cover;
 }
 header {
   @extend %flexCenter;
@@ -47,15 +48,4 @@ main {
   padding: 40px 10px 0;
 }
 @import "_todos";
-
-.today-container {
-  z-index: 1;
-  position: absolute;
-  bottom: 35px;
-  left: 35px;
-  width: 20vw;
-  height: 25vw;
-  min-width: 200px;
-  min-height: 30px;
-  background: #000;
-}
+@import "_date";

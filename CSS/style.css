@@ -1,4 +1,4 @@
-.drop-menu ul, .pop-up, .pop-up .name-insert, body, header, header > ul, header > ul li.logo-image, header > ul li.logo-image .by-wuix ul > :first-child, .todo-container .todo__name, .todo-container form.todo__input-bar, .todo-container .todo__list-container .todo-list .todo-item, .todo-container .todo__list-container .todo-list .todo-item > span {
+.drop-menu ul, .pop-up, .pop-up .name-insert, body, header, header > ul, header > ul li.logo-image, header > ul li.logo-image .by-wuix ul > :first-child, .todo-container .todo__name, .todo-container form.todo__input-bar, .todo-container .todo__list-container .todo-list .todo-item, .todo-container .todo__list-container .todo-list .todo-item > span, .today-container .today__name, .today-container .today__day-container, .today-container .today__day-container > * {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -101,7 +101,7 @@ li.link a {
 /* random msg icon */
 .msg--icon {
   z-index: 9;
-  font-size: 20px;
+  font-size: 24px;
 }
 
 .msg--icon .random-msg {
@@ -123,12 +123,12 @@ li.link a {
   top: 70%;
   width: 0;
   height: 0;
-  border: 10px solid transparent;
+  border: 12px solid transparent;
   border-left-color: #000000;
   border-right: 0;
   border-bottom: 0;
   margin-top: -5px;
-  margin-right: -12px;
+  margin-right: -13px;
 }
 
 .msg--icon .icon {
@@ -213,13 +213,14 @@ body {
 .container {
   overflow: hidden;
   position: relative;
-  width: 70vw;
-  height: 45vw;
+  width: 60vw;
+  height: 40vw;
   min-width: 800px;
   min-height: 580px;
   border-radius: 15px;
-  background-image: url("../images/screentone_3.jpg");
-  background-size: 120%;
+  background: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 0.4))), url("../images/screentone_2.jpg");
+  background: linear-gradient(to bottom, rgba(0, 0, 0, 0.4)), url("../images/screentone_2.jpg");
+  background-size: cover;
 }
 
 header {
@@ -347,7 +348,8 @@ main {
   position: absolute;
   top: 70px;
   right: 35px;
-  width: 50vw;
+  width: 45vw;
+  min-width: 520px;
 }
 
 .todo-container .todo__name {
@@ -451,11 +453,48 @@ main {
 .today-container {
   z-index: 1;
   position: absolute;
-  bottom: 35px;
-  left: 35px;
-  width: 20vw;
-  height: 25vw;
-  min-width: 200px;
-  min-height: 30px;
+  overflow: hidden;
+  bottom: 30px;
+  left: 30px;
+  width: 15vw;
+  height: 20vw;
+  min-width: 240px;
+  min-height: 340px;
   background: #000;
+  border-radius: 18px;
+}
+
+.today-container .today__name {
+  height: 40px;
+  font-size: 28px;
+  color: #fff;
+}
+
+.today-container .today__name .square {
+  width: 20px;
+  height: 20px;
+  margin-right: 10px;
+  border: 2px solid #fff;
+}
+
+.today-container .today__day-container {
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  position: absolute;
+  top: 40px;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  padding: 20px;
+  border-radius: 18px 18px 0 0;
+  background-image: url("../images/screentone_1.jpg");
+}
+
+.today-container .today__day-container > * {
+  width: 100%;
+  height: 70%;
+  margin-bottom: 15px;
+  padding: 15px;
 }
