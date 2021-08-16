@@ -4,9 +4,9 @@
   overflow: hidden;
   bottom: 30px;
   left: 30px;
-  width: 15vw;
-  height: 20vw;
-  min-width: 240px;
+  width: 12vw;
+  height: 17vw;
+  min-width: 280px;
   min-height: 340px;
   background: #000;
   border-radius: 18px;
@@ -36,6 +36,7 @@
     > * {
       @extend %flexCenter;
       width: 100%;
+      min-width: max-content;
       height: 70%;
       margin-bottom: 15px;
       padding: 15px;
