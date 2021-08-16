@@ -1,8 +1,8 @@
 /* random msg icon */
 .msg--icon {
-  z-index: 9;
   font-size: 24px;
   .random-msg {
+    z-index: 9;
     position: absolute;
     bottom: 43px;
     right: 91px;
@@ -26,6 +26,7 @@
     margin-right: -13px;
   }
   .icon {
+    cursor: pointer;
     position: absolute;
     bottom: 25px;
     right: 25px;
