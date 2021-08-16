@@ -1,0 +1,51 @@
+@import "_extends";
+@import "_common";
+@import "_icon-msg";
+@import "_name-popup";
+
+body {
+  @extend %flexCenter;
+  width: 100vw;
+  height: 100vh;
+  background-color: #000;
+  font-weight: 400;
+  font-family: "NeoDunggeunmo", "VT323", monospace;
+  font-size: 24px;
+}
+.container {
+  overflow: hidden;
+  position: relative;
+  width: 60vw;
+  height: 40vw;
+  min-width: 800px;
+  min-height: 580px;
+  border-radius: 15px;
+  background: linear-gradient(to bottom, rgba(0, 0, 0, 0.4)),
+    url("../images/screentone_2.jpg");
+  background-size: cover;
+}
+header {
+  @extend %flexCenter;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 5;
+  justify-content: space-between;
+  width: 100%;
+  height: 40px;
+  padding: 0 20px;
+  border-bottom: 2.5px solid #000;
+  background: #fff;
+  font-size: 27px;
+}
+@import "_header";
+main {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  padding: 40px 10px 0;
+}
+@import "_todos";
+@import "_date";
