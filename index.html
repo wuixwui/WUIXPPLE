@@ -22,8 +22,18 @@
     />
     <!-- STYLE -->
     <link rel="stylesheet" href="CSS/style.css" />
+    <!-- FAVICON -->
+    <link
+      rel="shortcut icon"
+      href="./images/black_apple_logo.png"
+      type="image/x-icon"
+    />
     <!-- JS -->
     <script src="JS/app.js" defer></script>
+    <script src="JS/name.js" defer></script>
+    <script src="JS/icon_msg.js" defer></script>
+    <script src="JS/clock.js" defer></script>
+    <script src="JS/weather.js" defer></script>
     <title>WUIXPPLE</title>
   </head>
   <body>
@@ -36,7 +46,7 @@
             <div class="by-wuix drop-menu shadowBox">
               <ul>
                 <li>
-                  ©WUIXPPLE
+                  <h1>©WUIXPPLE</h1>
                   <div class="ascii-art drop-menu shadowBox">
                     <pre>
                          
@@ -110,7 +120,7 @@
             Edit
             <div class="drop-menu shadowBox">
               <ul>
-                <li id="edit-name">edit Name</li>
+                <li id="edit-name">edit name</li>
                 <li id="edit-link">edit direct link</li>
                 <li id="delete-all-todo">delete all todo list</li>
               </ul>
@@ -128,7 +138,7 @@
         <div id="user-name">User Name</div>
       </header>
       <main>
-        <div class="pop-up hidden">
+        <div class="pop-up">
           <form class="name-insert shadowBox">
             <span>Hi! What's your name?</span>
             <input
@@ -142,13 +152,13 @@
           </form>
         </div>
         <div class="msg--icon">
-          <div class="random-msg shadowBox">Hi~ 오늘 하루는 어땠어요?</div>
+          <div class="random-msg shadowBox hidden">Hi~ How was your day?</div>
           <div class="icon shadowBox">
             <img src="./images/black_apple_logo.png" alt="white apple logo" />
           </div>
         </div>
         <div class="todo-container shadowBox">
-          <div class="todo__name">To Do System</div>
+          <h3 class="todo__name">To Do System</h3>
           <form class="todo__input-bar">
             <div>
               <span class="todo-num">0</span>
@@ -160,13 +170,13 @@
               name="todo"
               value=""
               maxlength="50"
-              placeholder="오늘은 뭘 해볼까요?"
+              placeholder="What are you doing today?"
             />
           </form>
           <div class="todo__list-container">
             <ul class="todo-list">
               <li class="todo-item">
-                <span>해야할 일들을 적어보아요~</span>
+                <span>Let's do this!</span>
                 <button class="btn todo__btn--success">success</button>
                 <button class="btn todo__btn--delete">delete</button>
               </li>
@@ -174,10 +184,10 @@
           </div>
         </div>
         <div class="today-container shadowBox">
-          <div class="today__name">
+          <h3 class="today__name">
             <div class="square"></div>
             Today System
-          </div>
+          </h3>
           <div class="today__day-container shadowBox">
             <div class="today__date shadowBox">00-00-day</div>
             <div class="today__time shadowBox">00:00:00</div>
