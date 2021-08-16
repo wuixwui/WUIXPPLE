@@ -457,10 +457,8 @@ main {
   overflow: hidden;
   bottom: 30px;
   left: 30px;
-  width: 12vw;
-  height: 17vw;
-  min-width: 280px;
-  min-height: 340px;
+  width: 320px;
+  height: 380px;
   background: #000;
   border-radius: 18px;
 }
