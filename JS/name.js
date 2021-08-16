@@ -14,6 +14,11 @@ function userNameSubmit(event) {
   localStorage.setItem(userNameKey, nameInsertInput.value);
   userName.innerText = nameInsertInput.value;
   nameInsertPopup.classList.add(classHidden);
+  randomMsg.innerText = `${nameInsertInput.value}님 반가워요!`;
+  randomMsg.classList.remove(classHidden);
+  setTimeout(function () {
+    randomMsg.classList.add(classHidden);
+  }, 2000);
 }
 function userNameEdit() {
   localStorage.removeItem(userNameKey);
