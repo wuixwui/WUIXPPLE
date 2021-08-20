@@ -32,6 +32,7 @@
     <script src="JS/app.js" defer></script>
     <script src="JS/name.js" defer></script>
     <script src="JS/icon_msg.js" defer></script>
+    <script src="JS/todo.js" defer></script>
     <script src="JS/clock.js" defer></script>
     <script src="JS/weather.js" defer></script>
     <title>WUIXPPLE</title>
@@ -170,17 +171,12 @@
               name="todo"
               value=""
               maxlength="50"
+              autocomplete="off"
               placeholder="What are you doing today?"
             />
           </form>
           <div class="todo__list-container">
-            <ul class="todo-list">
-              <li class="todo-item">
-                <span>Let's do this!</span>
-                <button class="btn todo__btn--success">success</button>
-                <button class="btn todo__btn--delete">delete</button>
-              </li>
-            </ul>
+            <ul class="todo-list"></ul>
           </div>
         </div>
         <div class="today-container shadowBox">
