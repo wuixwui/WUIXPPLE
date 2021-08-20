@@ -9,6 +9,7 @@ const TODOS_KEY = "todos";
 const deleteAllTodo = document.getElementById("delete-all-todo");
 
 let todoNumCount = 0;
+todoNum.innerText = todoNumCount;
 let toDos = [];
 
 function saveTodos() {
