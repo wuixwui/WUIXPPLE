@@ -1,6 +1,6 @@
 const todo = document.querySelector(".todo-container");
 const todoForm = todo.querySelector(".todo__input-bar");
-const todoNumCount = todoForm.querySelector(".todo-num");
+const todoNum = todoForm.querySelector(".todo-num");
 const todoInput = document.getElementById("todo--input");
 const todoList = todo.querySelector(".todo-list");
 const todoItemClass = "todo-item";
@@ -8,16 +8,20 @@ const todoBtnClass = "btn";
 const TODOS_KEY = "todos";
 const deleteAllTodo = document.getElementById("delete-all-todo");
 
+let todoNumCount = 0;
 let toDos = [];
 
 function saveTodos() {
   localStorage.setItem("todos", JSON.stringify(toDos));
+  localStorage.setItem("count", todoNumCount);
 }
 
 function successTodo(event) {
   const successTodo = event.target.parentNode;
   successTodo.remove();
   toDos = toDos.filter((toDo) => toDo.id !== parseInt(successTodo.id));
+  todoNumCount -= 1;
+  todoNum.innerText = todoNumCount;
   saveTodos();
   randomMsg.innerText =
     saveUserName +
@@ -32,6 +36,8 @@ function deleteTodo(event) {
   deleteTodo.remove();
   // local 저장소에서 데이터 삭제
   toDos = toDos.filter((toDo) => toDo.id !== parseInt(deleteTodo.id));
+  todoNumCount -= 1;
+  todoNum.innerText = todoNumCount;
   saveTodos();
   randomMsg.innerText = "...삭제중...";
   msgTalk();
@@ -75,6 +81,8 @@ function handleTodoSubmit(event) {
     id: Date.now(),
     todo: newTodo,
   };
+  todoNumCount += 1;
+  todoNum.innerText = todoNumCount;
   toDos.push(newTodoObj);
   paintTodo(newTodoObj);
   // local에 데이터 저장
@@ -84,10 +92,13 @@ function handleTodoSubmit(event) {
 todoForm.addEventListener("submit", handleTodoSubmit);
 
 const savedTodos = localStorage.getItem(TODOS_KEY);
+const savedCount = localStorage.getItem("count");
 
 if (savedTodos) {
   const parsedTodos = JSON.parse(savedTodos);
   //toDos 이전 목록 가져오기
+  todoNumCount = parseInt(savedCount);
+  todoNum.innerText = todoNumCount;
   toDos = parsedTodos;
   parsedTodos.forEach(paintTodo);
 }
@@ -96,6 +107,8 @@ deleteAllTodo.addEventListener("click", function () {
   while (todoList.hasChildNodes()) {
     todoList.removeChild(todoList.firstChild);
   }
+  todoNumCount = 0;
+  todoNum.innerText = todoNumCount;
   toDos = [];
   saveTodos();
 });
