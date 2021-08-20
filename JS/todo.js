@@ -6,6 +6,7 @@ const todoList = todo.querySelector(".todo-list");
 const todoItemClass = "todo-item";
 const todoBtnClass = "btn";
 const TODOS_KEY = "todos";
+const deleteAllTodo = document.getElementById("delete-all-todo");
 
 let toDos = [];
 
@@ -90,3 +91,11 @@ if (savedTodos) {
   toDos = parsedTodos;
   parsedTodos.forEach(paintTodo);
 }
+
+deleteAllTodo.addEventListener("click", function () {
+  while (todoList.hasChildNodes()) {
+    todoList.removeChild(todoList.firstChild);
+  }
+  toDos = [];
+  saveTodos();
+});
