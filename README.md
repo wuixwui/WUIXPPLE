@@ -76,15 +76,15 @@ WUIXPPLE을 이용해서 기록하고 하나하나 해결해나가 볼까요?
 2.  기록한 일 중 진행완료가 된 일들은 <button>SUCCESS</button> 버튼을 클릭해서 완료하십시오.
 3.  만약 기록한 일 중 더 이상 진행하지 않아도 되는 일들이 존재한다면 <button>DELETE</button> 버튼을 이용해서 삭제하십시오.
 
-        >+ 당신의 기록한 일은 카운트 되어서 To Do System의 왼쪽 상단에 표시됩니다.
+    >+ 당신의 기록한 일은 카운트 되어서 To Do System의 왼쪽 상단에 표시됩니다.
 
-        <br/>
+<br/>
 
-    > 만약 모든 일을 삭제하고 싶으시다면 <kbd style="background:#333; color:#fff;padding:5px;">Edit</kbd>메뉴 중 ** delete all todo list**기능을 이용하십시오.
-    > ![](https://images.velog.io/images/wuix/post/b7a5f671-064f-424f-ba57-75be5fe79914/list.gif)
-    >
-    > - 해야할 일들을 끝내시면 위리가 반응할 거예요!
-    >   ![](https://images.velog.io/images/wuix/post/0089739e-6edf-4111-9233-dc2254edbd92/list2.gif)
+> 만약 모든 일을 삭제하고 싶으시다면 <kbd style="background:#333; color:#fff;padding:5px;">Edit</kbd>메뉴 중 ** delete all todo list**기능을 이용하십시오.
+> ![](https://images.velog.io/images/wuix/post/b7a5f671-064f-424f-ba57-75be5fe79914/list.gif)
+>
+> - 해야할 일들을 끝내시면 위리가 반응할 거예요!
+>   ![](https://images.velog.io/images/wuix/post/0089739e-6edf-4111-9233-dc2254edbd92/list2.gif)
 
 <br/>
 
