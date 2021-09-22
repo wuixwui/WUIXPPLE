@@ -10,7 +10,7 @@ header > ul {
     .logo-png {
       height: 40px;
       width: 40px;
-      background-image: url("../images/black_apple_logo.png");
+      background-image: url('../images/black_apple_logo.png');
       background-size: 23px;
       background-repeat: no-repeat;
       background-position: center;
@@ -30,7 +30,7 @@ header > ul {
             width: 300px;
             top: -1px;
             left: 100%;
-            background: url("../images/screentone_2.jpg");
+            background: url('../images/screentone_2.jpg');
             pre {
               font-size: 10px;
               line-height: 1;
@@ -51,7 +51,7 @@ header > ul {
     &:hover {
       background: #000;
       .logo-png {
-        background-image: url("../images/white_apple_logo.png");
+        background-image: url('../images/white_apple_logo.png');
         background-size: 23px;
         background-repeat: no-repeat;
         background-position: center;
