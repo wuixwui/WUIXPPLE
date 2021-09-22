@@ -4,21 +4,21 @@
     min-width: 380px;
     height: 100%;
   }
-  header #user-name {
+
+  header  {
     display: none;
   }
 
   .todo-container {
-    top: 50px;
+    top: 20px;
     right: 20px;
     width: calc(100% - 40px);
     min-width: 300px;
-    height: 55%;
   }
+  
   .todo-container .todo__list-container {
-    height: calc(100% - 95px);
     .todo-list {
-      max-height: 100%;
+      max-height: calc(100vh - 450px;
       .todo-item {
         flex-direction: column;
         padding: 10px;
@@ -53,7 +53,8 @@
     font-size: 18px;
     .random-msg {
       right: 95px;
-      width: 73%;
+      width: fit-content;
+      max-width: 70%;
     }
   }
 }
