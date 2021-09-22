@@ -1,7 +1,7 @@
-@import "_extends";
-@import "_common";
-@import "_icon-msg";
-@import "_name-popup";
+@import '_extends';
+@import '_common';
+@import '_icon-msg';
+@import '_name-popup';
 
 body {
   @extend %flexCenter;
@@ -9,7 +9,7 @@ body {
   height: 100vh;
   background-color: #000;
   font-weight: 400;
-  font-family: "NeoDunggeunmo", "VT323", monospace;
+  font-family: 'NeoDunggeunmo', 'VT323', monospace;
   font-size: 24px;
 }
 .container {
@@ -21,7 +21,7 @@ body {
   min-height: 580px;
   border-radius: 15px;
   background: linear-gradient(to bottom, rgba(0, 0, 0, 0.4)),
-    url("../images/screentone_2.jpg");
+    url('../images/screentone_2.jpg');
   background-size: cover;
 }
 header {
@@ -38,7 +38,7 @@ header {
   background: #fff;
   font-size: 27px;
 }
-@import "_header";
+@import '_header';
 main {
   position: absolute;
   top: 0;
@@ -47,5 +47,8 @@ main {
   height: 100%;
   padding: 40px 10px 0;
 }
-@import "_todos";
-@import "_date";
+@import '_todos';
+@import '_date';
+
+/* ------------- media ---------------- */
+@import '_mobile';

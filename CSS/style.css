@@ -23,6 +23,10 @@ a {
   color: #000;
 }
 
+button {
+  cursor: pointer;
+}
+
 /* display: none */
 .hidden {
   display: none !important;
@@ -89,7 +93,7 @@ li.link a {
   padding: 8px 10px;
   margin-left: 6px;
   font-size: 24px;
-  font-family: "NeoDunggeunmo", "VT323", monospace;
+  font-family: 'NeoDunggeunmo', 'VT323', monospace;
   color: #000;
 }
 
@@ -207,7 +211,7 @@ body {
   height: 100vh;
   background-color: #000;
   font-weight: 400;
-  font-family: "NeoDunggeunmo", "VT323", monospace;
+  font-family: 'NeoDunggeunmo', 'VT323', monospace;
   font-size: 24px;
 }
 
@@ -381,7 +385,7 @@ main {
   border: 3px inset #000;
   text-align: right;
   font-size: 24px;
-  font-family: "NeoDunggeunmo", "VT323", monospace;
+  font-family: 'NeoDunggeunmo', 'VT323', monospace;
 }
 
 .todo-container form.todo__input-bar #todo--input::-webkit-input-placeholder {
@@ -496,7 +500,67 @@ main {
   min-width: -webkit-max-content;
   min-width: -moz-max-content;
   min-width: max-content;
-  height: 70%;
+  height: 100%;
   margin-bottom: 15px;
   padding: 15px;
 }
+
+/* ------------- media ---------------- */
+@media screen and (max-width: 1000px) {
+  .container {
+    width: 100%;
+    min-width: 380px;
+    height: 100%;
+  }
+  header #user-name {
+    display: none;
+  }
+  .todo-container {
+    top: 50px;
+    right: 20px;
+    width: calc(100% - 40px);
+    min-width: 300px;
+    height: 55%;
+  }
+  .todo-container .todo__list-container {
+    height: calc(100% - 95px);
+  }
+  .todo-container .todo__list-container .todo-list {
+    max-height: 100%;
+  }
+  .todo-container .todo__list-container .todo-list .todo-item {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    padding: 10px;
+    width: 100%;
+    height: auto;
+  }
+  .todo-container .todo__list-container .todo-list .todo-item > span {
+    font-size: 18px;
+  }
+  .todo-container .todo__list-container .todo-list .todo-item > .btn {
+    width: 100%;
+    margin-left: 0;
+    margin-bottom: 5px;
+  }
+  .today-container {
+    width: 250px;
+    height: 250px;
+  }
+  .today-container .today__day-container > * {
+    font-size: 18px;
+    height: auto;
+    margin-bottom: 10px;
+    padding: 10px;
+  }
+  .msg--icon {
+    font-size: 18px;
+  }
+  .msg--icon .random-msg {
+    right: 95px;
+    width: 73%;
+  }
+}
+/*# sourceMappingURL=style.css.map */
