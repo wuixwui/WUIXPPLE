@@ -8,6 +8,9 @@ a {
   text-decoration: none;
   color: #000;
 }
+button {
+  cursor: pointer;
+}
 /* display: none */
 .hidden {
   display: none !important;
@@ -55,15 +58,15 @@ li.link {
 }
 /* button */
 .btn {
-  background: url("../images/screentone_2.jpg");
+  background: url('../images/screentone_2.jpg');
   border: 4px outset #cecece;
   padding: 8px 10px;
   margin-left: 6px;
   font-size: 24px;
-  font-family: "NeoDunggeunmo", "VT323", monospace;
+  font-family: 'NeoDunggeunmo', 'VT323', monospace;
   color: #000;
   &:active {
-    background: url("../images/screentone_3.jpg");
+    background: url('../images/screentone_3.jpg');
     border: 4px inset #cdcdcd;
   }
 }
