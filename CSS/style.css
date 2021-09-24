@@ -1,4 +1,4 @@
-.drop-menu ul, .pop-up, .pop-up .name-insert, body, header, header > ul, header > ul li.logo-image, header > ul li.logo-image .by-wuix ul > :first-child, .todo-container .todo__name, .todo-container form.todo__input-bar, .todo-container .todo__list-container .todo-list .todo-item, .todo-container .todo__list-container .todo-list .todo-item > span, .today-container .today__name, .today-container .today__day-container, .today-container .today__day-container > * {
+.drop-menu ul, .pop-up, .pop-up .name-insert, body, header, header > ul, header > ul li.logo-image, header > ul li.logo-image .by-wuix ul > :first-child, .todo-container .todo__name, .todo-container form.todo__input-bar, .todo-container .todo__list-container .todo-list .todo-item, .today-container .today__name, .today-container .today__day-container, .today-container .today__day-container > * {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -441,18 +441,20 @@ main {
   -webkit-box-pack: end;
       -ms-flex-pack: end;
           justify-content: flex-end;
+  overflow: hidden;
   padding: 10px;
   width: 100%;
-  height: 80px;
   background: #fff;
   border: 6px double #000;
 }
 
 .todo-container .todo__list-container .todo-list .todo-item > span {
-  font-size: 24px;
-  margin-right: 5px;
+  display: block;
   overflow: hidden;
-  height: 60px;
+  text-overflow: ellipsis;
+  word-wrap: break-word;
+  width: 100%;
+  font-size: 24px;
 }
 
 .today-container {
@@ -511,6 +513,7 @@ main {
     width: 100%;
     min-width: 380px;
     height: 100%;
+    border-radius: 0;
   }
   header {
     display: none;
@@ -534,6 +537,7 @@ main {
     height: auto;
   }
   .todo-container .todo__list-container .todo-list .todo-item > span {
+    padding: 5px 5px 10px;
     font-size: 18px;
   }
   .todo-container .todo__list-container .todo-list .todo-item > .btn {
