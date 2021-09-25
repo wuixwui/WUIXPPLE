@@ -509,6 +509,10 @@ main {
 
 /* ------------- media ---------------- */
 @media screen and (max-width: 1000px) {
+  body {
+    margin-top: 50px;
+    height: calc(100vh - 50px);
+  }
   .container {
     width: 100%;
     min-width: 380px;
