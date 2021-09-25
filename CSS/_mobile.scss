@@ -3,15 +3,15 @@
     width: 100%;
     min-width: 380px;
     height: 100%;
-    border-radius:0;
+    border-radius: 0;
   }
 
-  header  #user-name{
+  header #user-name {
     display: none;
   }
 
   .drop-menu {
-  width: 200px;
+    width: 200px;
   }
 
   .todo-container {
@@ -20,10 +20,10 @@
     width: calc(100% - 40px);
     min-width: 300px;
   }
-  
+
   .todo-container .todo__list-container {
     .todo-list {
-      max-height: calc(100vh - 450px;
+      max-height: calc(100vh - 280px);
       .todo-item {
         flex-direction: column;
         padding: 10px;

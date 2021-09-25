@@ -208,7 +208,7 @@ li.link a {
 
 body {
   width: 100vw;
-  height: -webkit-fill-available;
+  height: 100vh;
   background-color: #000;
   font-weight: 400;
   font-family: 'NeoDunggeunmo', 'VT323', monospace;
@@ -218,9 +218,8 @@ body {
 .container {
   overflow: hidden;
   position: relative;
-  width: 60vw;
-  height: 40vw;
-  min-height: 100vh;
+  width: 90vw;
+  height: 60vw;
   min-height: -webkit-fill-available;
   min-width: 800px;
   min-height: 580px;
@@ -531,7 +530,7 @@ main {
     min-width: 300px;
   }
   .todo-container .todo__list-container .todo-list {
-    max-height: calc(100vh - 450px);
+    max-height: calc(100vh - 280px);
   }
   .todo-container .todo__list-container .todo-list .todo-item {
     -webkit-box-orient: vertical;
