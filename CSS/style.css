@@ -121,7 +121,7 @@ li.link a {
 }
 
 .msg--icon .random-msg:after {
-  content: "";
+  content: '';
   position: absolute;
   right: 0;
   top: 70%;
@@ -137,6 +137,7 @@ li.link a {
 
 .msg--icon .icon {
   cursor: pointer;
+  z-index: 9;
   position: absolute;
   bottom: 25px;
   right: 25px;
@@ -208,7 +209,7 @@ li.link a {
 
 body {
   width: 100vw;
-  height: 100vh;
+  height: calc(var(--vh, 1vh) * 100);
   background-color: #000;
   font-weight: 400;
   font-family: 'NeoDunggeunmo', 'VT323', monospace;
@@ -512,6 +513,7 @@ main {
 /* ------------- media ---------------- */
 @media screen and (max-width: 500px) {
   .container {
+    overflow: auto;
     width: 100%;
     min-width: 380px;
     height: 100%;
@@ -527,13 +529,13 @@ main {
     width: 200px;
   }
   .todo-container {
-    top: 60px;
+    top: 55px;
     right: 20px;
     width: calc(100% - 40px);
     min-width: 300px;
   }
   .todo-container .todo__list-container .todo-list {
-    max-height: calc(100vh - 280px);
+    max-height: none;
   }
   .todo-container .todo__list-container .todo-list .todo-item {
     -webkit-box-orient: vertical;
@@ -560,11 +562,16 @@ main {
     font-size: 18px;
   }
   .msg--icon .random-msg {
+    position: fixed;
     right: 95px;
     width: -webkit-fit-content;
     width: -moz-fit-content;
     width: fit-content;
     max-width: 70%;
+  }
+  .msg--icon .icon {
+    position: fixed;
+    right: 25px;
   }
 }
 /*# sourceMappingURL=style.css.map */
