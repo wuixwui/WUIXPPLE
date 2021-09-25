@@ -1,5 +1,6 @@
 @media screen and (max-width: 500px) {
   .container {
+    overflow: auto;
     width: 100%;
     min-width: 380px;
     height: 100%;
@@ -18,7 +19,7 @@
   }
 
   .todo-container {
-    top: 60px;
+    top: 55px;
     right: 20px;
     width: calc(100% - 40px);
     min-width: 300px;
@@ -26,7 +27,7 @@
 
   .todo-container .todo__list-container {
     .todo-list {
-      max-height: calc(100vh - 280px);
+      max-height: none;
       .todo-item {
         flex-direction: column;
         padding: 10px;
@@ -52,9 +53,14 @@
   .msg--icon {
     font-size: 18px;
     .random-msg {
+      position: fixed;
       right: 95px;
       width: fit-content;
       max-width: 70%;
+    }
+    .icon {
+      position: fixed;
+      right: 25px;
     }
   }
 }

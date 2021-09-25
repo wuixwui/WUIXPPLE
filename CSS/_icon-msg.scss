@@ -12,7 +12,7 @@
     color: #000;
   }
   .random-msg:after {
-    content: "";
+    content: '';
     position: absolute;
     right: 0;
     top: 70%;
@@ -27,6 +27,7 @@
   }
   .icon {
     cursor: pointer;
+    z-index: 9;
     position: absolute;
     bottom: 25px;
     right: 25px;
