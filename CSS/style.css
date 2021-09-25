@@ -206,15 +206,9 @@ li.link a {
   font-size: 25px;
 }
 
-html {
-  height: -webkit-fill-available;
-}
-
 body {
   width: 100vw;
-  /* height: calc(var(--vh, 1vh) * 100); */
-  min-height: 100vh;
-  min-height: -webkit-fill-available;
+  height: -webkit-fill-available;
   background-color: #000;
   font-weight: 400;
   font-family: 'NeoDunggeunmo', 'VT323', monospace;
@@ -226,6 +220,8 @@ body {
   position: relative;
   width: 60vw;
   height: 40vw;
+  min-height: 100vh;
+  min-height: -webkit-fill-available;
   min-width: 800px;
   min-height: 580px;
   border-radius: 15px;
@@ -339,6 +335,7 @@ header > ul > li:not(.logo-image):hover .drop-menu {
 
 #user-name {
   height: 40px;
+  white-space: nowrap;
   line-height: 40px;
   padding: 3px 13px 0 13px;
   text-align: right;
@@ -514,18 +511,21 @@ main {
 }
 
 /* ------------- media ---------------- */
-@media screen and (max-width: 1000px) {
+@media screen and (max-width: 500px) {
   .container {
     width: 100%;
     min-width: 380px;
     height: 100%;
     border-radius: 0;
   }
-  header {
+  header #user-name {
     display: none;
   }
+  .drop-menu {
+    width: 200px;
+  }
   .todo-container {
-    top: 20px;
+    top: 60px;
     right: 20px;
     width: calc(100% - 40px);
     min-width: 300px;
@@ -552,14 +552,7 @@ main {
     margin-bottom: 5px;
   }
   .today-container {
-    width: 250px;
-    height: 250px;
-  }
-  .today-container .today__day-container > * {
-    font-size: 18px;
-    height: auto;
-    margin-bottom: 10px;
-    padding: 10px;
+    display: none;
   }
   .msg--icon {
     font-size: 18px;

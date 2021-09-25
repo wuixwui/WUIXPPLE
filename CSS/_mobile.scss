@@ -1,4 +1,4 @@
-@media screen and (max-width: 1000px) {
+@media screen and (max-width: 500px) {
   .container {
     width: 100%;
     min-width: 380px;
@@ -6,12 +6,16 @@
     border-radius:0;
   }
 
-  header  {
+  header  #user-name{
     display: none;
   }
 
+  .drop-menu {
+  width: 200px;
+  }
+
   .todo-container {
-    top: 20px;
+    top: 60px;
     right: 20px;
     width: calc(100% - 40px);
     min-width: 300px;
@@ -39,16 +43,7 @@
   }
 
   .today-container {
-    width: 250px;
-    height: 250px;
-    .today__day-container {
-      > * {
-        font-size: 18px;
-        height: auto;
-        margin-bottom: 10px;
-        padding: 10px;
-      }
-    }
+    display: none;
   }
 
   .msg--icon {

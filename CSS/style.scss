@@ -3,15 +3,10 @@
 @import '_icon-msg';
 @import '_name-popup';
 
-html {
-  height: -webkit-fill-available;
-}
 body {
   @extend %flexCenter;
   width: 100vw;
-  /* height: calc(var(--vh, 1vh) * 100); */
-  min-height: 100vh;
-  min-height: -webkit-fill-available;
+  height: -webkit-fill-available;
   background-color: #000;
   font-weight: 400;
   font-family: 'NeoDunggeunmo', 'VT323', monospace;
@@ -22,6 +17,8 @@ body {
   position: relative;
   width: 60vw;
   height: 40vw;
+  min-height: 100vh;
+  min-height: -webkit-fill-available;
   min-width: 800px;
   min-height: 580px;
   border-radius: 15px;
