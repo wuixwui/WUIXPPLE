@@ -520,6 +520,9 @@ main {
   header #user-name {
     display: none;
   }
+  header > ul li.logo-image {
+    display: none;
+  }
   .drop-menu {
     width: 200px;
   }
