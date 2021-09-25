@@ -6,8 +6,9 @@ body {
   .container {
     width: 100%;
     min-width: 380px;
-    height: 100%;
+    height: calc(100% - 40px);
     border-radius:0;
+    margin-bottom: 40px;
   }
 
   header  {
