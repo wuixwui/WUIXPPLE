@@ -5,6 +5,7 @@ function setMobileSize() {
   document.documentElement.style.setProperty('--vh', `${vh}px`);
 }
 
+/* height: calc(var(--vh, 1vh) * 100); */
 window.addEventListener('resize', () => {
   setMobileSize();
 });
